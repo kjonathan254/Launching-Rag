@@ -78,7 +78,7 @@ SUPABASE_URL=https://your-project-ref.supabase.co
 SUPABASE_ANON_KEY=your_anon_key_here
 SUPABASE_SERVICE_ROLE_KEY=your_service_role_key_here
 OPENAI_API_KEY=sk-your_openai_key_here
-OPENAI_EMBED_MODEL=text-embedding-3-large
+OPENAI_EMBED_MODEL=text-embedding-3-small  # 1536 dimensions
 OPENAI_CHAT_MODEL=gpt-4o
 AI_PROVIDER=openai
 ```
@@ -140,7 +140,7 @@ Example Response:
 ```env
 AI_PROVIDER=openai
 OPENAI_API_KEY=your_key
-OPENAI_EMBED_MODEL=text-embedding-3-small
+OPENAI_EMBED_MODEL=text-embedding-3-small  # 1536 dimensions
 OPENAI_CHAT_MODEL=gpt-4o-mini
 ```
 

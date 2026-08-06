@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS rag_chunks (
     chunk_id TEXT UNIQUE NOT NULL,
     source TEXT NOT NULL,
     text TEXT NOT NULL,
-    embedding VECTOR(3072),  -- Supports up to 3072 dimensions for text-embedding-3-large
+    embedding VECTOR(1536),  -- Supports up to 1536 dimensions for text-embedding-3-small
     created_at TIMESTAMPTZ DEFAULT NOW(),
     updated_at TIMESTAMPTZ DEFAULT NOW()
 );
@@ -26,7 +26,7 @@ WITH (m = 16, ef_construction = 64);
 
 -- Create function for vector similarity search
 CREATE OR REPLACE FUNCTION match_chunks(
-    query_embedding VECTOR(3072),
+    query_embedding VECTOR(1536),
     match_count INT DEFAULT 6
 )
 RETURNS TABLE(
