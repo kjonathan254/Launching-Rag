@@ -9,9 +9,11 @@ env/
 ENV/
 .venv
 
-# Environment
+# Environment - NEVER commit these!
 .env
 .env.local
+.env.*
+!.env.example
 
 # IDE
 .vscode/
@@ -30,3 +32,8 @@ Thumbs.db
 .pytest_cache/
 .coverage
 htmlcov/
+
+# Secrets
+*.pem
+*.key
+secrets.json
