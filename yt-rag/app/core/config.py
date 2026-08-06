@@ -8,9 +8,9 @@ class Settings(BaseSettings):
     SUPABASE_ANON_KEY: str
     SUPABASE_SERVICE_ROLE_KEY: str
 
-    # OpenAI Configuration
+    # OpenAI Configuration (using latest models)
     OPENAI_API_KEY: str
-    OPENAI_EMBED_MODEL: str = "text-embedding-3-large"
+    OPENAI_EMBED_MODEL: str = "text-embedding-3-small"  # 1536 dimensions
     OPENAI_CHAT_MODEL: str = "gpt-4o"
 
     # AI Provider (openai or anthropic)
